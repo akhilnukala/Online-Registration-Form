@@ -1,0 +1,332 @@
+/* ========================================
+  Fixes Box Sizing
+======================================== */
+
+html
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after
+{
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+
+
+/* ========================================
+  Clears List Styles, Margin, and Padding
+======================================== */
+
+ol,
+ul
+{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+
+/* ========================================
+  General CSS
+======================================== */
+
+body
+{
+  font-family: 'Raleway', sans-serif;
+
+  color: #55687a;
+  background: #fcfcfc;
+}
+
+h2
+{
+  color: #000;
+}
+
+
+
+/* ========================================
+  Header
+======================================== */
+
+.header-title
+{
+  padding: 5px 0;
+
+  text-align: center;
+
+  color: #fff;
+  background-color: #2d3945;
+}
+
+.intro
+{
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  text-align: center;
+
+  color: #55687a;
+}
+
+.double_lines
+{
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-top: 2px;
+
+  border-top: solid 4px;
+  border-bottom: solid 2px;
+}
+
+
+
+/* ========================================
+  Form
+======================================== */
+
+form
+{
+  width: 85%;
+  margin: 0 auto;
+
+  border: none;
+}
+
+legend
+{
+  font-size: 1.3em;
+  font-weight: bold;
+
+  width: 100%;
+  padding-top: 30px;
+
+  color: #000;
+}
+
+fieldset
+{
+  padding: 0;
+
+  border: none;
+}
+
+.single_line
+{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  border-bottom: solid 2px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='address'],
+input[type='city'],
+select,
+textarea
+{
+  width: 100%;
+  padding: 15px;
+
+  transition: background-color .3s ease;
+
+  border: .15em solid transparent;
+  border-radius: 5px;
+  background-color: #eff0f1;
+}
+
+input[type='radio'],
+input[type='checkbox']
+{
+  margin: 5px 10px;
+}
+
+label
+{
+  display: block;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+label.light
+{
+  display: inline;
+}
+
+#zip
+{
+  width: 50%;
+}
+
+input:focus
+{
+  text-align: left;
+
+  color: #fdfeff;
+  border: solid .15em #46698b;
+  outline: none;
+  background-color: #b0b1b1;
+}
+
+select
+{
+  height: 55px;
+}
+
+select:focus,
+textarea:focus
+{
+  color: #fdfeff;
+  border: solid .15em #46698b;
+  outline: none;
+  background-color: #b0b1b1;
+}
+
+select .selected
+{
+  display: none;
+}
+
+button
+{
+  font-size: 1.3em;
+  font-weight: bold;
+
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #4ebbb5;
+}
+
+/* Moves placeholder to right and adds style. */
+::-webkit-input-placeholder
+{
+  font-size: .7em;
+  font-style: italic;
+
+  text-align: right;
+}
+
+:-moz-placeholder
+{
+  font-size: .7em;
+  font-style: italic;
+  /* Firefox 18- */
+
+  text-align: right;
+}
+
+::-moz-placeholder
+{
+  font-size: .7em;
+  font-style: italic;
+  /* Firefox 19+ */
+
+  text-align: right;
+}
+
+:-ms-input-placeholder
+{
+  font-size: .7em;
+  font-style: italic;
+
+  text-align: right;
+}
+
+/* Removes placeholder when user selects field. */
+input:focus::-webkit-input-placeholder
+{
+  color: transparent;
+}
+input:focus:-moz-placeholder
+{
+  color: transparent;
+} /* FF 4-18 */
+input:focus::-moz-placeholder
+{
+  color: transparent;
+} /* FF 19+ */
+input:focus:-ms-input-placeholder
+{
+  color: transparent;
+} /* IE 10+ */
+
+
+
+/* ========================================
+  Footer
+======================================== */
+
+footer
+{
+  font-size: .8em;
+
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+  text-align: center;
+}
+
+
+
+/* ========================================
+  Media Queries
+======================================== */
+
+/* Tablets */
+
+@media screen and (min-width: 480px)
+{
+  body
+  {
+    background-image: url('../img/back.png');
+    background-repeat: repeat;
+  }
+
+  .solid_background
+  {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+    border-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: #fff;
+  }
+}
+
+/* Large Displays */
+
+@media screen and (min-width: 1024px)
+{
+  .solid_background
+  {
+    width: 50%;
+    max-width: 1200px;
+  }
+}
